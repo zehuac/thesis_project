@@ -38,13 +38,13 @@ The dataset contains data from various sources include FMS database, vehicle con
 
 6. Run **mongo_import.py** to import the route data into MongoDB. The dafault database and collection are called **results** and **sweden_small** separately. One parameter is required: **--input_dir** [The location of the route data files]. Another database called **vid** will also be created in this course, this is for recording the ids of vehicles we have in the database.
 
-7. Run **normalization.py** to calculate the fuel consumption indices based on the route data we imported before.
+7. Run **normalization.py** to calculate the fuel consumption indices based on the route data we imported before and update them into MongoDB.
 
 ### Vehicle Configuration Data
 
 1. Download the vehicle configuration data from Scania datalake in **Json** format. 
 
-2. Run ****
+2. Run **configuration_importer.py** to import all configuration data into MongoDB, the default database and collection are **vehicle_data** and **configuration** seperately.
 
 ### Weather Data
 
@@ -63,6 +63,8 @@ The dataset contains data from various sources include FMS database, vehicle con
 3. Run **reset_fci.py** if you want to reset the fuel consumption indices in MongoDB for all the road segments.
 
 ### Get Estimated Vehicle Weights
+
+Download the estimated weights of the vehicles into the folder 
 
 ### Extract and Integrate the Data
 
